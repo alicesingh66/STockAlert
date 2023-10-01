@@ -12,7 +12,7 @@ print(yesterday,day_before)
 
 # News API key, from https://newsapi.org/
 NEWS_SITE = "https://newsapi.org/v2/everything"
-NEWS_API_KEY = "8dff8a0d3f744bf6bd1a8889986c5303"
+NEWS_API_KEY = "key"
 NEWS_PARAMETERS = {
     'q':'IBM+stock',
     'qInTitle':'IBM',
@@ -24,7 +24,7 @@ NEWS_PARAMETERS = {
 # all these need to be changed to valid credentials
 
 # Alpha Vantage API key, from https://www.alphavantage.co/
-AV_API_KEY = "P5A36P19IAMAA5S8"
+AV_API_KEY = "key"
 STOCK = "https://www.alphavantage.co/query"
 STOCK_PARAMETERS = {
     'function':'TIME_SERIES_DAILY',
@@ -36,8 +36,8 @@ STOCK_PARAMETERS = {
 
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
-account_sid = "ACdff2d5034ebb911ec607e30a7bff18cf"
-auth_token = "45330946240787ed040a9a63d871a851"
+account_sid = "sid"
+auth_token = "token"
 
 client = Client(account_sid, auth_token)
 
@@ -67,7 +67,7 @@ if diff_percentage> 0:
         message = client.messages.create(
             body=f'Stock:{updown}\n{text}',
             from_='+12565734672',
-            to='+917054246155'
+            to='contact_number'
         )
 
 
